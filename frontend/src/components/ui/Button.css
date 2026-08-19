@@ -1,0 +1,125 @@
+/* ─── Button base ───────────────────────────────────────────────────────────── */
+.fic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  font-family: var(--font-family-sans);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  transition: background 0.12s ease, border-color 0.12s ease,
+              box-shadow 0.12s ease, opacity 0.12s ease, transform 0.1s ease;
+}
+
+.fic-btn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.fic-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────────────────── */
+.fic-btn--sm {
+  height: 38px;
+  padding: 0 18px;
+  font-size: 13.5px;
+  border-radius: 9999px;
+}
+.fic-btn--md {
+  height: 44px;
+  padding: 0 22px;
+  font-size: 14px;
+  border-radius: 9999px;
+}
+.fic-btn--lg {
+  height: 50px;
+  padding: 0 28px;
+  font-size: 15px;
+  border-radius: 9999px;
+}
+
+.fic-btn--full {
+  width: 100%;
+}
+
+/* ─── Primary (flat brand orange - no gradients) ─────────────────────────────── */
+.fic-btn--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 122, 48, 0.25);
+  font-weight: 700;
+}
+.fic-btn--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 4px 14px rgba(255, 122, 48, 0.35);
+}
+
+/* ─── Secondary (emerald tint) ───────────────────────────────────────────────── */
+.fic-btn--secondary {
+  background-color: #ECFDF5;
+  color: #059669;
+  border-color: #A7F3D0;
+  font-weight: 600;
+}
+.fic-btn--secondary:hover:not(:disabled) {
+  background-color: #D1FAE5;
+  border-color: #6EE7B7;
+}
+
+/* ─── Outline ────────────────────────────────────────────────────────────────── */
+.fic-btn--outline {
+  background-color: #ffffff;
+  border-color: #E2E8F0;
+  color: #475569;
+}
+.fic-btn--outline:hover:not(:disabled) {
+  border-color: #FF7A30;
+  color: #FF7A30;
+  background-color: #FFF4ED;
+}
+
+/* ─── Ghost ──────────────────────────────────────────────────────────────────── */
+.fic-btn--ghost {
+  background-color: transparent;
+  color: #64748B;
+}
+.fic-btn--ghost:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  color: #0F172A;
+}
+
+/* ─── Danger ─────────────────────────────────────────────────────────────────── */
+.fic-btn--danger {
+  background-color: #DC2626;
+  color: white;
+  font-weight: 700;
+}
+.fic-btn--danger:hover:not(:disabled) {
+  background-color: #B91C1C;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+}
+
+/* ─── Warning ────────────────────────────────────────────────────────────────── */
+.fic-btn--warning {
+  background-color: #D97706;
+  color: white;
+  font-weight: 700;
+}
+.fic-btn--warning:hover:not(:disabled) {
+  background-color: #B45309;
+}
+
+/* ─── Icon slot ──────────────────────────────────────────────────────────────── */
+.fic-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

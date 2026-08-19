@@ -1,0 +1,73 @@
+.fic-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-card); /* 28px */
+  border: 1px dashed var(--color-border);
+  margin: 16px 0;
+}
+
+.fic-state-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.fic-state-icon--loading {
+  background-color: var(--color-primary-blue-light);
+  color: var(--color-primary-blue);
+}
+
+.fic-state-icon--empty {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+}
+
+.fic-state-icon--error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.fic-state-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.fic-state-subtext {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Skeleton loader animations */
+.fic-skeleton-wrapper {
+  gap: 16px;
+}
+
+.fic-skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.fic-skeleton--title { height: 28px; width: 40%; }
+.fic-skeleton--text { height: 16px; width: 70%; }
+.fic-skeleton--card { height: 120px; width: 100%; }
+
+@keyframes skeletonLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

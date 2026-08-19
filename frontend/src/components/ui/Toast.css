@@ -1,0 +1,79 @@
+.fic-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  pointer-events: none;
+}
+
+.fic-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 20px;
+  background-color: var(--color-bg-card);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-modal);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.fic-toast::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.fic-toast--success::before { background-color: var(--color-success); }
+.fic-toast--error::before { background-color: var(--color-error); }
+.fic-toast--warning::before { background-color: var(--color-warning); }
+.fic-toast--info::before { background-color: var(--color-primary-blue); }
+
+.fic-toast__icon {
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+}
+.fic-toast--success .fic-toast__icon { color: var(--color-success); }
+.fic-toast--error .fic-toast__icon { color: var(--color-error); }
+.fic-toast--warning .fic-toast__icon { color: var(--color-warning); }
+.fic-toast--info .fic-toast__icon { color: var(--color-primary-blue); }
+
+.fic-toast__content {
+  flex: 1;
+}
+
+.fic-toast__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.fic-toast__msg {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.fic-toast__close {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
+  transition: color var(--transition-fast);
+}
+.fic-toast__close:hover {
+  color: var(--color-text-primary);
+}

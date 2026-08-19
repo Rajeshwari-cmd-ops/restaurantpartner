@@ -1,0 +1,96 @@
+:root {
+  /* ── Typography ─────────────────────────────────── */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Brand Colors (#FF7A30 Flat Premium Orange) ──── */
+  --color-primary:               #FF7A30;
+  --color-primary-hover:         #E5661E;
+  --color-primary-soft:          #FFF4ED;
+  --color-nav-active:            #FF7A30;
+  --color-gradient-accent:       #FF7A30;
+  --color-gradient-accent-hover: #E5661E;
+
+  /* ── Sidebar Theme (Charcoal Dark) ──────────────── */
+  --sidebar-bg-dark:     #111827;
+  --sidebar-card-dark:   #1F2937;
+  --sidebar-text-muted:  #9CA3AF;
+  --sidebar-border-dark: #374151;
+
+  /* ── Surface Palette ────────────────────────────── */
+  --color-bg-main:   #F7F8FA;
+  --color-bg-card:   #FFFFFF;
+  --color-bg-alt:    #F9FAFB;
+  --color-bg-subtle: #F3F4F6;
+
+  /* ── Semantic Status Colors ─────────────────────── */
+  --color-success:    #10B981;
+  --color-success-text:#059669;
+  --color-success-bg: #ECFDF5;
+
+  --color-warning:    #F59E0B;
+  --color-warning-text:#D97706;
+  --color-warning-bg: #FFFBEB;
+
+  --color-error:      #EF4444;
+  --color-error-text: #DC2626;
+  --color-error-bg:   #FEF2F2;
+
+  --color-info:       #3B82F6;
+  --color-info-text:  #2563EB;
+  --color-info-bg:    #EFF6FF;
+
+  --color-purple:     #8B5CF6;
+  --color-purple-bg:  #F5F3FF;
+
+  /* ── Text Neutrals ──────────────────────────────── */
+  --color-text-primary:   #111827;
+  --color-text-secondary: #4B5563;
+  --color-text-muted:     #9CA3AF;
+  --color-text-inverse:   #FFFFFF;
+
+  /* ── Borders & Lines ────────────────────────────── */
+  --color-border:       #E5E7EB;
+  --color-border-soft:  #F3F4F6;
+  --color-border-hover: #D1D5DB;
+  --color-focus-ring:   rgba(255, 122, 48, 0.25);
+
+  /* ── Spacing (Scaled for 10-15% UI scale boost) ───── */
+  --spacing-xs: 5px;
+  --spacing-sm: 9px;
+  --spacing-md: 18px;
+  --spacing-lg: 28px;
+  --spacing-xl: 36px;
+
+  /* ── Radius System (Ultra-Curvy Modern SaaS) ────── */
+  --radius-sm:   14px;
+  --radius-md:   20px;
+  --radius-lg:   28px;
+  --radius-card: 28px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (Soft Enterprise Shadows) ──────────── */
+  --shadow-xs:    0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-card:  0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md:    0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-dropdown: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --shadow-accent-glow: 0 4px 14px rgba(255, 107, 44, 0.3);
+
+  /* ── Layout Constants ──────────────────────────── */
+  --sidebar-width:           260px;
+  --sidebar-collapsed-width: 82px;
+  --header-height:           70px;
+
+  /* ── Z-Index Hierarchy ──────────────────────────── */
+  --z-base:     1;
+  --z-sticky:   100;
+  --z-sidebar:  200;
+  --z-dropdown: 300;
+  --z-overlay:  400;
+  --z-modal:    500;
+  --z-toast:    600;
+
+  /* ── Transitions ───────────────────────────────── */
+  --transition-fast:   0.12s ease;
+  --transition-normal: 0.2s ease;
+}

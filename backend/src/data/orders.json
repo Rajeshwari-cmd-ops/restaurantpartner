@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ord-1001",
+    "orderNumber": "#FIC-8891",
+    "customerName": "Aarav Mehta",
+    "customerPhone": "+91 98201 11223",
+    "items": [
+      { "id": "i1", "name": "Paneer Butter Masala", "quantity": 1, "price": 340, "isVeg": true },
+      { "id": "i2", "name": "Butter Naan", "quantity": 3, "price": 45, "isVeg": true },
+      { "id": "i3", "name": "Jeera Rice", "quantity": 1, "price": 180, "isVeg": true }
+    ],
+    "totalAmount": 655,
+    "status": "new",
+    "paymentStatus": "paid",
+    "createdAt": "2026-07-29T14:10:00.000Z",
+    "estimatedPrepTime": 20,
+    "deliveryType": "delivery"
+  },
+  {
+    "id": "ord-1002",
+    "orderNumber": "#FIC-8890",
+    "customerName": "Priya Sharma",
+    "customerPhone": "+91 99100 44332",
+    "items": [
+      { "id": "i4", "name": "Chicken Dum Biryani (Full)", "quantity": 2, "price": 420, "isVeg": false, "notes": "Extra spicy" },
+      { "id": "i5", "name": "Mirchi Ka Salan", "quantity": 1, "price": 90, "isVeg": true }
+    ],
+    "totalAmount": 930,
+    "status": "preparing",
+    "paymentStatus": "paid",
+    "createdAt": "2026-07-29T14:00:00.000Z",
+    "estimatedPrepTime": 25,
+    "deliveryType": "delivery"
+  },
+  {
+    "id": "ord-1003",
+    "orderNumber": "#FIC-8889",
+    "customerName": "Rohan Gupta",
+    "customerPhone": "+91 97112 88776",
+    "items": [
+      { "id": "i6", "name": "Dal Makhani", "quantity": 1, "price": 290, "isVeg": true },
+      { "id": "i7", "name": "Garlic Naan", "quantity": 2, "price": 60, "isVeg": true }
+    ],
+    "totalAmount": 410,
+    "status": "ready",
+    "paymentStatus": "paid",
+    "createdAt": "2026-07-29T13:50:00.000Z",
+    "estimatedPrepTime": 15,
+    "deliveryType": "pickup"
+  }
+]

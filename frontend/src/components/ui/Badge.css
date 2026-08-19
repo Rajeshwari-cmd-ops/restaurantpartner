@@ -1,0 +1,61 @@
+/* ─── Badge base ────────────────────────────────────────────────────────────── */
+.fic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-family-sans);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────────────────── */
+.fic-badge--sm {
+  padding: 2px 8px;
+  font-size: 10.5px;
+}
+.fic-badge--md {
+  padding: 3px 10px;
+  font-size: 11.5px;
+}
+
+/* ─── Dot indicator ──────────────────────────────────────────────────────────── */
+.fic-badge__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* ─── Semantic variants ──────────────────────────────────────────────────────── */
+.fic-badge--success {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+.fic-badge--warning {
+  background-color: #FFFBEB;
+  color: #D97706;
+}
+.fic-badge--error {
+  background-color: #FEF2F2;
+  color: #DC2626;
+}
+.fic-badge--info {
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+.fic-badge--neutral {
+  background-color: #F1F5F9;
+  color: #475569;
+}
+.fic-badge--primary {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+}
+.fic-badge--yellow {
+  background-color: #FFFBEB;
+  color: #92400E;
+}

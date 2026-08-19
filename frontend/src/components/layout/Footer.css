@@ -1,0 +1,62 @@
+.fic-footer {
+  padding: 16px 24px;
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.fic-footer__left,
+.fic-footer__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fic-footer__version {
+  background-color: var(--color-bg-alt);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.fic-footer__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.fic-footer__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  box-shadow: 0 0 0 2px var(--color-success-bg);
+}
+
+.fic-footer__divider {
+  color: var(--color-text-muted);
+}
+
+.fic-footer__link {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+.fic-footer__link:hover {
+  color: var(--color-primary-blue);
+}
+
+.fic-footer__built {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

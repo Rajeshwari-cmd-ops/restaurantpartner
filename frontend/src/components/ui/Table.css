@@ -1,0 +1,84 @@
+.fic-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-card); /* 28px */
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+}
+
+.fic-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15px;
+}
+
+.fic-table th {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  user-select: none;
+}
+
+.fic-table th.sortable {
+  cursor: pointer;
+}
+.fic-table th.sortable:hover {
+  color: var(--color-primary-blue);
+  background-color: var(--color-bg-alt);
+}
+
+.fic-table__th-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fic-table__sort-icon {
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fic-table__sort-icon.active {
+  color: var(--color-primary-blue);
+}
+.fic-table__sort-icon.desc {
+  transform: rotate(180deg);
+}
+
+.fic-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.fic-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+.fic-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+.fic-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.fic-table__loading-cell,
+.fic-table__empty-cell {
+  text-align: center;
+  padding: 40px 16px !important;
+  color: var(--color-text-secondary);
+}
+
+.fic-table__spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary-blue);
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
