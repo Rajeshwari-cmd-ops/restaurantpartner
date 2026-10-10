@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: fic-restaurant-backend-2026
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: https://fic-restaurant-frontend.onrender.com,http://localhost:5173
+      - key: CLIENT_URL
+        value: https://fic-restaurant-frontend.onrender.com
+
+  - type: static
+    name: fic-restaurant-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
