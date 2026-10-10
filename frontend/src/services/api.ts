@@ -11,14 +11,19 @@ import {
   mockNotifications,
 } from '../mock';
 
-const rawApiUrl = (import.meta.env.VITE_API_BASE_URL as string) || 'http://localhost:5000/api/v1';
+const defaultApiUrl = import.meta.env.PROD
+  ? 'https://fic-restaurant-backend-2026.onrender.com/api/v1'
+  : 'http://localhost:5000/api/v1';
+
+const rawApiUrl = (import.meta.env.VITE_API_BASE_URL as string) || defaultApiUrl;
 const API_BASE_URL = rawApiUrl.replace(/\/+$/, '');
 
 async function fetchFromBackend<T>(endpoint: string, options: RequestInit = {}, fallbackData: T): Promise<T> {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 2500);
+    const timeoutId = setTimeout(() => controller.abort(), 3500);
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      credentials: 'include',
       ...options,
       headers: {
         'Content-Type': 'application/json',

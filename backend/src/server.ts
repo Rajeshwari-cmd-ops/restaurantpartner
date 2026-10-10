@@ -3,6 +3,7 @@ import http from 'http';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
+import { corsOptions, getAllowedOrigins } from './config/corsConfig';
 import { initSocketServer } from './socket/socketServer';
 import { seedDatabase } from './seed/seedData';
 import apiRoutes from './routes/apiRoutes';
@@ -13,14 +14,8 @@ const app = express();
 const httpServer = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-const corsOrigin = process.env.CORS_ORIGIN || process.env.CLIENT_URL || '*';
-const allowedOrigins = corsOrigin === '*' ? '*' : corsOrigin.includes(',') ? corsOrigin.split(',').map(s => s.trim()) : corsOrigin;
-
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
+// Apply Express CORS middleware
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Router
@@ -44,6 +39,7 @@ const startServer = async () => {
     console.log(` 🚀 Forge India Connect Backend REST & WebSocket Engine Running`);
     console.log(` 📍 API Base URL : http://localhost:${PORT}/api/v1`);
     console.log(` 🔌 Socket.IO   : http://localhost:${PORT}`);
+    console.log(` 🌐 Allowed CORS: ${getAllowedOrigins().join(', ')}`);
     console.log(`=============================================================\n`);
   });
 };

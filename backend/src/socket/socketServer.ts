@@ -1,18 +1,12 @@
 import { Server as HttpServer } from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
+import { corsOptions } from '../config/corsConfig';
 
 let io: SocketIOServer | null = null;
 
 export const initSocketServer = (httpServer: HttpServer): SocketIOServer => {
-  const corsOrigin = process.env.CORS_ORIGIN || process.env.CLIENT_URL || '*';
-  const allowedOrigins = corsOrigin === '*' ? '*' : corsOrigin.includes(',') ? corsOrigin.split(',').map(s => s.trim()) : corsOrigin;
-
   io = new SocketIOServer(httpServer, {
-    cors: {
-      origin: allowedOrigins,
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-      credentials: true,
-    },
+    cors: corsOptions,
   });
 
   io.on('connection', (socket: Socket) => {
